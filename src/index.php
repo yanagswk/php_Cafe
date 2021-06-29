@@ -25,29 +25,30 @@ require_once('Menu.php');
         <form method="post" action="Confirm.php">
             <div class="menu-items">
 
-                <!-- data.phpのmenus -->
+                <!-- Data.php: $menus -->
                 <?php foreach ($menus as $menu): ?>
                     <div class="menu-item">
-                    <img src="<?php echo $menu->getImage() ?>" class="menu-item-image">
-                    <h3 class="menu-item-name">
+                        <img src="<?php echo $menu->getImage() ?>" class="menu-item-image">
+                        <h3 class="menu-item-name">
+                            <!-- Show.phpへのメニューごとのリンク -->
+                            <a href="Show.php?name=<?php echo $menu->getName() ?>">
+                                <?php echo $menu->getName() ?>
+                            </a>
+                        </h3>
 
-                        <!-- Show.phpへのメニューごとのリンク -->
-                        <a href="Show.php?name=<?php echo $menu->getName() ?>">
-                            <?php echo $menu->getName() ?>
-                        </a>
-                    </h3>
-
-                        <!-- インスタンスのクラスによって処理が変わる -->
+                        <!-- Drinkクラスの場合、タイプを表示 -->
                         <?php if ($menu instanceof Drink): ?>
                             <p class="menu-item-type"><?php echo $menu->getType() ?></p>
+                        <!-- それ以外の場合、辛さを表示 -->
                         <?php else: ?>
                             <?php for ($i=0; $i<$menu->getSpiciness(); $i++): ?>
-                                <img src="https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/php/chilli.png" class='icon-spiciness'>
+                                <img class='icon-spiciness' src="https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/php/chilli.png" >
                             <?php endfor ?>
                         <?php endif ?>
 
                         <!-- 値段表示 -->
                         <p class="price">¥<?php echo $menu->getTaxIncludedPrice() ?>（税込）</p>
+                        <!-- name=value POST送信 -->
                         <input type="text" value="0" name="<?php echo $menu->getName() ?>">
                         <span>個</span>
                     </div>

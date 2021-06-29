@@ -1,8 +1,8 @@
 <?php
 class User {
     private $id;
-    private $name;
-    private $gender;
+    private $name;      // 名前
+    private $gender;    // 性別
     private static $count = 0;
 
     public function __construct($name, $gender) {
