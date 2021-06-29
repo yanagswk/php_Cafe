@@ -1,9 +1,10 @@
 <?php
-class Review {
-    private $menuName;
 
-    private $userId;
-    private $body;
+// レビュー一覧を管理するクラス
+class Review {
+    private $menuName;  // メニュー名
+    private $userId;    // インスタンスid
+    private $body;      // レビュー
 
 
     public function __construct($menuName, $userId, $body) {
@@ -12,17 +13,21 @@ class Review {
         $this->body = $body;
     }
 
+
+    // メニュー名取得
     public function getMenuName() {
         return $this->menuName;
     }
 
+    // レビュー内容取得
     public function getBody() {
         return $this->body;
     }
 
+
+    // インスタンスの$userIdと一致するインスタンスを返す
     public function getUser($users) {
         foreach ($users as $user) {
-            // $userのidプロパティと、インスタンス自身のuserIdプロパティを比べる
             if ($user->getId() == $this->userId) {
                 return $user;
             }

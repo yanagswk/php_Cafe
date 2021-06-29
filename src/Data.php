@@ -10,7 +10,6 @@ $curry = new Food('CURRY', 900, 'https://s3-ap-northeast-1.amazonaws.com/progate
 $pasta = new Food('PASTA', 1200, 'https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/php/pasta.png', 1);
 
 $menus = array($juice, $coffee, $curry, $pasta);
-// $menus = array($pasta, $curry, $juice, $coffee);
 
 $user1 = new User('suzuki', 'male');
 $user2 = new User('tanaka', 'female');

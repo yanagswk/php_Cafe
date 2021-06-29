@@ -1,4 +1,8 @@
-<?php require_once('Data.php') ?>
+<?php
+
+require_once('Data.php');
+
+?>
 
 
 <html>
@@ -12,14 +16,16 @@
 <body>
     <div class="order-wrapper">
         <h2>注文内容確認</h2>
+        <!-- 合計金額 -->
         <?php $totalPayment = 0 ?>
 
         <?php foreach($menus as $menu): ?>
 
-            <?php 
-                $orderCount = $_POST[$menu->getName()];
-                $menu->setOrderCount($orderCount);
-                $totalPayment += $menu->getTotalPrice();
+            <?php
+                // $_POSTは配列取得(JUICE:"10"COFFEE:"6"CURRY:"8"PASTA:"0")
+                $orderCount = $_POST[$menu->getName()];     // メニューの個数取得
+                $menu->setOrderCount($orderCount);          // 注文数セット
+                $totalPayment += $menu->getTotalPrice();    // 合計金額
             ?>
             <p class="order-amount">
                 <?php echo $menu->getName() ?>
