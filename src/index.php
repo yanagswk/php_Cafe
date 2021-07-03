@@ -1,6 +1,10 @@
 <?php
-require_once('Data.php');
-require_once('Menu.php');
+
+require_once('./private/Menu.php');
+require_once('./private/Data.php');
+require_once('./private/SqlCommand.php');
+require_once('./private/Database.php');
+
 
 ?>
 
