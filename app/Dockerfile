@@ -7,3 +7,6 @@ RUN apt-get update && apt-get install -y \
     # xdebug インストール
     && pecl install xdebug \
     && docker-php-ext-enable xdebug
+
+# mysqlのドライバーをインストール : PDOによるDB接続の際に使用
+RUN docker-php-ext-install pdo pdo_mysql mysqli mbstring

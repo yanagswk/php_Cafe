@@ -1,7 +1,7 @@
 <?php
 
-require_once('Menu.php');
-require_once('Data.php');
+require_once('./private/Menu.php');
+require_once('./private/Data.php');
 
 // index.php からgetで送られたパラメータ値を取得
 $menuName = $_GET['name'];

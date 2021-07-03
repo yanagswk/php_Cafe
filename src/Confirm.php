@@ -1,6 +1,6 @@
 <?php
 
-require_once('Data.php');
+require_once('./private/Data.php');
 
 ?>
 
