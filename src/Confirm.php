@@ -1,6 +1,7 @@
 <?php
 
 require_once('./private/Data.php');
+require_once('./private/config.php');
 
 ?>
 
