@@ -1,4 +1,7 @@
 <?php
+
+namespace MyApp;
+
 class Menu {
     protected $name;    // メニュー名
     protected $price;   // 値段

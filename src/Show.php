@@ -1,5 +1,8 @@
 <?php
 
+use MyApp\Drink;
+use MyApp\Menu;
+
 require_once('./private/Menu.php');
 require_once('./private/Data.php');
 

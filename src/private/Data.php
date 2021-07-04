@@ -6,6 +6,12 @@ require_once('User.php');
 require_once('SqlCommand.php');
 require_once('Database.php');
 
+use MyApp\User;
+use MyApp\SqlCommand;
+use MyApp\Database;
+use MyApp\Drink;
+use MyApp\Food;
+
 
 $pdo = Database::getInstance();
 $sqlCommand = new SqlCommand($pdo);
