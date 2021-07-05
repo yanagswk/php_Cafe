@@ -3,7 +3,7 @@
 namespace MyApp;
 use MyApp\Menu;
 
-require_once('Menu.php');
+// require_once('Menu.php');
 
 class Food extends Menu {
     // 辛さ数値

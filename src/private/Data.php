@@ -1,16 +1,18 @@
 <?php
-require_once('Drink.php');
-require_once('Food.php');
-require_once('Review.php');
-require_once('User.php');
-require_once('SqlCommand.php');
-require_once('Database.php');
+// require_once('Drink.php');
+// require_once('Food.php');
+// require_once('Review.php');
+// require_once('User.php');
+// require_once('SqlCommand.php');
+// require_once('Database.php');
+require_once('config.php');
 
 use MyApp\User;
 use MyApp\SqlCommand;
 use MyApp\Database;
 use MyApp\Drink;
 use MyApp\Food;
+use MyApp\Review;
 
 
 $pdo = Database::getInstance();

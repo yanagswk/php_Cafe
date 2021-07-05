@@ -1,5 +1,7 @@
 <?php
 
+namespace MyApp;
+
 // レビュー一覧を管理するクラス
 class Review {
     private $menuName;  // メニュー名

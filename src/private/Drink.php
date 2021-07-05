@@ -2,7 +2,8 @@
 namespace MyApp;
 use MyApp\Menu;
 
-require_once('Menu.php');
+// require_once('Menu.php');
+
 
 
 class Drink extends Menu {

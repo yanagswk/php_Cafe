@@ -2,9 +2,11 @@
 
 use MyApp\Drink;
 use MyApp\Menu;
+use MyApp\Review;
 
-require_once('./private/Menu.php');
+// require_once('./private/Menu.php');
 require_once('./private/Data.php');
+require_once('./private/config.php');
 
 // index.php からgetで送られたパラメータ値を取得
 $menuName = $_GET['name'];
