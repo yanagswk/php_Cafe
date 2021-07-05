@@ -1,4 +1,8 @@
 <?php
+
+namespace MyApp;
+use MyApp\Menu;
+
 require_once('Menu.php');
 
 class Food extends Menu {

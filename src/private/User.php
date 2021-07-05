@@ -1,4 +1,7 @@
 <?php
+
+namespace MyApp;
+
 class User {
     private $id;
     private $name;      // 名前
