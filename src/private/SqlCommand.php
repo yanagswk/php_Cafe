@@ -12,7 +12,7 @@ class SqlCommand {
     // Drinkデータ取得
     public function getDrink() {
         // クエリ作成
-        $drinkQuery = $this->pdo->query("SELECT * FROM drink");
+        $drinkQuery = $this->pdo->query("SELECT * FROM new_drink");
 
         // クエリを実行してデータ取得
         $drink = $drinkQuery->fetchAll();
@@ -23,7 +23,7 @@ class SqlCommand {
     // Foodデータ取得
     public function getFood() {
         // クエリ作成
-        $foodQuery = $this->pdo->query("SELECT * FROM food");
+        $foodQuery = $this->pdo->query("SELECT * FROM new_food");
 
         // クエリを実行してデータ取得
         $food = $foodQuery->fetchAll();
@@ -34,7 +34,7 @@ class SqlCommand {
     // Userデータ取得
     public function getUser() {
         // クエリ作成
-        $userQuery = $this->pdo->query("SELECT * FROM user");
+        $userQuery = $this->pdo->query("SELECT * FROM new_user");
 
         // クエリを実行してデータ取得
         $user = $userQuery->fetchAll();
@@ -45,7 +45,7 @@ class SqlCommand {
     // Reviewデータ取得
     public function getReview() {
         // クエリ作成
-        $reviewQuery = $this->pdo->query("SELECT * FROM review");
+        $reviewQuery = $this->pdo->query("SELECT * FROM new_review");
 
         // クエリを実行してデータ取得
         $review = $reviewQuery->fetchAll();
